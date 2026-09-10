@@ -1,8 +1,11 @@
 fileFormatVersion: 2
-guid: 9b59e60fc29a95b41bfd971b2ea2f464
-NativeFormatImporter:
+guid: a33f5c96fdd2944499631e41393e06c6
+MonoImporter:
   externalObjects: {}
-  mainObjectFileID: 0
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
@@ -11,6 +14,5 @@ AssetOrigin:
   productId: 60894
   packageName: Awesome Cartoon Planes Style 3
   packageVersion: 1.0
-  assetPath: Assets/AwesomeCartoonPlanes/Materials/Plane2_S3_2048x2048.mat
+  assetPath: Assets/AwesomeCartoonPlanes/Scripts/Plane.cs
   uploadId: 113473
-
