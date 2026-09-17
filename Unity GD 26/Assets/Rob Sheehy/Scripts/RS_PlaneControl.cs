@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class RS_PlaneControl : MonoBehaviour
@@ -8,6 +9,14 @@ public class RS_PlaneControl : MonoBehaviour
     private float thrustValue = 20f;
     private float gravity = 9.81f;
     float drag = 1;
+    public GameObject theBombCloneTemplate;
+
+    internal void TurnRed()
+    {
+        Renderer r = GetComponentInChildren<Renderer>();
+        r.material.color = Color.red;
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -58,6 +67,9 @@ public class RS_PlaneControl : MonoBehaviour
         }
 
         acceleration += -drag* velocity;
+
+        if (Input.GetKeyDown(KeyCode.Return))
+            Instantiate(theBombCloneTemplate);
 
         velocity += acceleration * Time.deltaTime;
         transform.position += velocity * Time.deltaTime;
