@@ -13,7 +13,9 @@ public class RS_PlaneControl : MonoBehaviour
 
     internal void TurnRed()
     {
+
         Renderer r = GetComponentInChildren<Renderer>();
+
         r.material.color = Color.red;
     }
 
@@ -65,6 +67,9 @@ public class RS_PlaneControl : MonoBehaviour
         {
             acceleration += transform.forward * thrustValue;
         }
+
+        if (Input.GetKeyDown(KeyCode.Return))
+            Instantiate(theBombCloneTemplate);
 
         acceleration += -drag* velocity;
 
