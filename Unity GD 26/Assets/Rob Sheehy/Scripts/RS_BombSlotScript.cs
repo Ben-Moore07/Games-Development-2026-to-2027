@@ -1,9 +1,14 @@
+using System;
 using UnityEngine;
 
-public class RD_bombScript : MonoBehaviour
+public class RS_BombSlotScript : MonoBehaviour
 {
-    private Vector3 velocity;
-    private Vector3 acceleration;
+    RS_PlaneControl theBoss;
+
+    internal void IamTheBoss(RS_PlaneControl rS_PlaneControl)
+    {
+       theBoss = rS_PlaneControl;
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,8 +19,6 @@ public class RD_bombScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        velocity += acceleration * Time.deltaTime;
-        transform.position += velocity * Time.deltaTime;
-
+        
     }
 }
